@@ -22,6 +22,8 @@ const NativeSelect = styled.select`
   width: 100%;
   height: 100%;
   opacity: 0;
+
+  appearance: none;
 `;
 
 const StyledSelect = styled.div`
@@ -36,6 +38,10 @@ const StyledSelect = styled.div`
 
   font-size: ${16 / 16}rem;
   line-height: 19px;
+
+  ${NativeSelect}:focus + & {
+    outline: 1px solid -webkit-focus-ring-color;
+  }
 `;
 
 const StyledIcon = styled(Icon)`
